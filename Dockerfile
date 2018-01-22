@@ -10,4 +10,4 @@ WORKDIR ${NGHOME}
 RUN mkdir -p app/tmp/pids
 RUN mkdir -p app/log
 
-RUN ["/bin/bash","-c","source /etc/profile.d/rvm.sh ; bundle install > /dev/null 2>&1"]
+RUN ["/bin/bash","-c","source /etc/profile.d/rvm.sh ; cd app ; bundle install"]
