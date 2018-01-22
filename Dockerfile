@@ -5,7 +5,9 @@ FROM       np-start-base
 MAINTAINER lyx <yixiao.li@quaie.com>
 
 ADD docker_use/blog.conf /etc/nginx/conf.d/
-RUN mkdir -p ${NGHOME}/app/tmp/pids
-RUN mkdir -p ${NGHOME}/app/log
 
 WORKDIR ${NGHOME}
+RUN mkdir -p app/tmp/pids
+RUN mkdir -p app/log
+
+RUN ["/bin/bash","-c","source /etc/profile.d/rvm.sh ; bundle install"]
