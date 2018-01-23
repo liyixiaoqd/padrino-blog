@@ -18,7 +18,7 @@ ActiveRecord::Base.configurations[:development] = {
   :database  => 'dbt',
   :username  => 'lyx',
   :password  => 'test',
-  :host      => 'db',
+  :host      => 'postgresql',
   :port      => 5432
 
 }
